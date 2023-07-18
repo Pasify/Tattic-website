@@ -1,4 +1,4 @@
-import items from "/data.js";
+import items from "./data.js";
 const product = document.getElementById("product");
 
 function renderProducts() {

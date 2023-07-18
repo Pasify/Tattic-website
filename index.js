@@ -1,10 +1,9 @@
-import items from "/data.js"
-const product= document.getElementById("product")
+import items from "/data.js";
+const product = document.getElementById("product");
 
-
-function renderProducts(){
-    let newProducts = items.map(item=>{
-        return   `
+function renderProducts() {
+  let newProducts = items.map((item) => {
+    return `
                 <div class="product-container">
                         <img class="product-image" src="${item.image}">
                     <div>
@@ -14,20 +13,12 @@ function renderProducts(){
                         <button class="product-button">Purchase</button> 
                     
                  </div>
-                `
-    })
-    
-    return product.innerHTML+= newProducts.join(" ")
-    console.log(newProducts)
-    
+                `;
+  });
+
+  // return product.innerHTML+= newProducts.join(" ")
+  product.insertAdjacentHTML("afterbegin", newProducts);
+  console.log(newProducts);
 }
 
-renderProducts()
-
-
-
-
-
-
-                    
-         
+renderProducts();

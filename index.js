@@ -1,4 +1,4 @@
-import items from "./data.js";
+import items from "./scripts/data.js";
 const product = document.getElementById("product");
 
 function renderProducts() {
@@ -18,7 +18,6 @@ function renderProducts() {
 
   // return product.innerHTML+= newProducts.join(" ")
   product.insertAdjacentHTML("afterbegin", newProducts);
-  console.log(newProducts);
 }
 
 renderProducts();
